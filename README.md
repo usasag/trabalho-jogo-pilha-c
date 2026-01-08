@@ -1,6 +1,7 @@
 # 🎮 Torres de Hanói - Jogo Interativo em C
 
 Um jogo clássico implementado em **C puro** com estrutura de dados **Pilha (Stack)**, completamente autossuficiente em um único arquivo compilável.
+**Nota:** O código foi modificado para não usar caracteres especiais, garantindo compatibilidade total com qualquer terminal C padrão.
 
 ---
 
@@ -39,8 +40,8 @@ O jogo foi inventado pelo matemático francês Édouard Lucas em 1883. A lenda d
 - Customizado (1-10 discos)
 
 ✅ **Interface Gráfica em Terminal**
-- Visualização das torres em tempo real com caracteres Unicode (█)
-- Barras horizontais (═) representando a base
+- Visualização das torres em tempo real com caracteres ASCII (#)
+- Barras horizontais (-) representando a base
 - Barras verticais (|) representando os pinos
 - Status detalhado: número de discos em cada torre, total de movimentos
 
@@ -116,34 +117,19 @@ Total: 7 movimentos (número mínimo possível)
 
 ## 🔧 Como Compilar e Executar
 
-### Compilação Simples
+### Execução Rápida (Windows)
+O jogo já está compilado! Basta executar o arquivo `hanoi.exe`:
+
+```bash
+./hanoi.exe
+```
+ou simplesmente clique duas vezes em `hanoi.exe`.
+
+### Compilação (Opcional)
+Caso queira recompilar o código:
 
 ```bash
 gcc -o hanoi hanoi_game.c
-```
-
-### Compilação com Flags de Otimização
-
-```bash
-gcc -O2 -Wall -Wextra -o hanoi hanoi_game.c
-```
-
-**Flags explicadas:**
-- `-O2`: Otimização de nível 2 para melhor desempenho
-- `-Wall`: Mostra todos os warnings
-- `-Wextra`: Mostra warnings adicionais
-- `-o hanoi`: Nome do executável resultante
-
-### Execução
-
-```bash
-./hanoi
-```
-
-**Ou no Windows (usando MinGW):**
-```bash
-gcc -o hanoi.exe hanoi_game.c
-hanoi.exe
 ```
 
 ---
